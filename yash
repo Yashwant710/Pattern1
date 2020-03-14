@@ -18,7 +18,7 @@ void main()
 		  for(sp=0;sp<spac;sp++)//LOOP FOR SPACE IN BETWEEN *
 		  cout<<" ";
 		}
-		for(sp=0;sp<spac;sp++)//LOOP FOR LEAVING LINES ACCORDINGLY
+		for(sp=0;sp<spac;sp++)//LOOP FOR LEAVING LINES ACCORDINGLY(OPTIONAL)
 		cout<<"\n";
 		low--;hig++;
 		n--;
