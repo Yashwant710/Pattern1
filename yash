@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	int i,j,n,m,low=0,hig=0,k,spac,sp;
+	clrscr();
+	cout<<"\nEnter the no.of rows : ";
+	cin>>n;
+	cout<<"\nEnter the no.of spaces for your pattern : ";
+	cin>>spac;
+	m=n;
+	for(i=1;i<=m;i++)//LOOP FOR NO.OF ROWS
+       {for(k=1;k<=(n-1)*(spac+1);k++)//LOOP FOR SPACE ADJUSTMENTS(up lim imp)
+	cout<<" ";
+	{ for(j=low;j<=hig;j++)  /*LOOP FOR DISPLAYING * ACCORDING TO
+					 THE ROW NUMER*/
+		{ cout<<"*";
+		  for(sp=0;sp<spac;sp++)//LOOP FOR SPACE IN BETWEEN *
+		  cout<<" ";
+		}
+		for(sp=0;sp<spac;sp++)
+		cout<<"\n";
+		low--;hig++;
+		n--;
+
+	      }
+	    }
+	    getch();
+}
