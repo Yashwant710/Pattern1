@@ -9,8 +9,9 @@ void main()
 	cout<<"\nEnter the no.of spaces for your pattern : ";
 	cin>>spac;
 	m=n;
-	for(i=1;i<=m;i++)//LOOP FOR NO.OF ROWS
-       {for(k=1;k<=(n-1)*(spac+1);k++)//LOOP FOR SPACE ADJUSTMENTS(up lim imp)
+	if(spac>0)
+	{ for(i=1;i<=m;i++)//LOOP FOR NO.OF ROWS
+	 {for(k=1;k<=(n-1)*(spac+1);k++)//LOOP FOR SPACE ADJUSTMENTS(up lim imp)
 	cout<<" ";
 	{ for(j=low;j<=hig;j++)  /*LOOP FOR DISPLAYING * ACCORDING TO
 					 THE ROW NUMER*/
@@ -18,12 +19,28 @@ void main()
 		  for(sp=0;sp<spac;sp++)//LOOP FOR SPACE IN BETWEEN *
 		  cout<<" ";
 		}
-		for(sp=0;sp<spac;sp++)//LOOP FOR LEAVING LINES ACCORDINGLY(OPTIONAL)
+		for(sp=0;sp<spac;sp++)
 		cout<<"\n";
 		low--;hig++;
 		n--;
 
 	      }
 	    }
+	}
+	else
+	{ for(i=1;i<=m;i++)//LOOP FOR NO.OF ROWS
+	 {for(k=1;k<=n-1;k++)//LOOP FOR SPACE ADJUSTMENTS(up lim imp)
+	cout<<" ";
+	     { for(j=low;j<=hig;j++)  /*LOOP FOR DISPLAYING * ACCORDING TO
+					 THE ROW NUMER*/
+		cout<<"*";
+		cout<<"\n";
+		low--;hig++;
+		n--;
+
+	     }
+	 }
+	}
 	    getch();
 }
+
